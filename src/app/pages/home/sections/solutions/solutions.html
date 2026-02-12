@@ -1,1 +1,63 @@
-<p>solutions works!</p>
+ <section class="py-20 px-4 sm:px-6 lg:px-8 bg-black">
+      <div class="max-w-7xl mx-auto text-white">
+        
+        <!-- Header -->
+        <div class="mb-12">
+          <h2 class="text-4xl sm:text-5xl font-bold text-slate-100 mb-4">
+            Staffing solutions for
+            <span class="italic text-teal-400">all of your needs</span>
+          </h2>
+          <p class="text-lg text-slate-400 max-w-2xl">
+            Fill any gaps with temporary staff while you find quality candidates for permanent roles.
+          </p>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <div
+            *ngFor="let solution of solutions"
+            class="rounded-2xl p-8 sm:p-10 text-white shadow-xl transition-transform duration-300 hover:-translate-y-1"
+            style="background: linear-gradient(135deg, #0f766e, #0d9488);"
+          >
+            <!-- Icon -->
+            <div class="mb-6">
+              <ng-container [ngSwitch]="solution.icon">
+
+                <!-- Short-term icon -->
+                <svg *ngSwitchCase="'short'" xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 opacity-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <circle cx="12" cy="12" r="9" stroke-width="2"/>
+                  <path stroke-width="2" d="M12 7v5l3 3"/>
+                  <path stroke-width="2" d="M3 12h3M18 12h3"/>
+                </svg>
+
+                <!-- Long-term icon -->
+                <svg *ngSwitchCase="'long'" xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 opacity-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <circle cx="12" cy="12" r="9" stroke-width="2"/>
+                  <path stroke-width="2" d="M12 7v5l3 3"/>
+                  <path stroke-width="2" d="M14 2l4 4-4 4"/>
+                </svg>
+
+                <!-- Permanent icon -->
+                <svg *ngSwitchCase="'permanent'" xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 opacity-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-width="2" d="M8 12l2 2 4-4"/>
+                  <path stroke-width="2" d="M12 3l7 4v6c0 5-3.5 7.5-7 8-3.5-.5-7-3-7-8V7l7-4z"/>
+                </svg>
+
+              </ng-container>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-2xl font-bold mb-4 leading-tight">
+              {{ solution.title }}
+            </h3>
+
+            <!-- Description -->
+            <p class="text-base leading-relaxed text-teal-50">
+              {{ solution.description }}
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>

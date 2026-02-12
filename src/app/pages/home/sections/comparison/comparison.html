@@ -1,1 +1,147 @@
-<p>comparison works!</p>
+<section class="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50">
+  <div class="max-w-7xl mx-auto">
+    <!-- Header -->
+    <div class="mb-12">
+      <h2 class="text-4xl sm:text-5xl font-bold text-slate-900 mb-4 text-center sm:text-left">
+        The <span class="italic text-teal-600">smarter choice</span> for staffing
+      </h2>
+      <p class="text-lg text-slate-600 max-w-3xl text-center sm:text-left">
+        Compare traditional staffing agencies—full of phone calls, paperwork, and waiting—to Jobcart's AI-powered
+        approach that connects you with reliable workers, quickly.
+      </p>
+    </div>
+
+    <!-- Comparison Table - Desktop -->
+    <div class="hidden md:block overflow-hidden rounded-3xl  shadow-xl">
+      <div class="overflow-x-auto">
+        <table class="w-full text-white">
+          <!-- Table Header -->
+          <thead>
+            <tr>
+              <th class="px-6 py-8 text-left font-semibold text-lg border-b border-teal-800 w-1/3">
+                <span class="text-sm text-teal-200">Features</span>
+              </th>
+
+              <th class="px-6 py-8 text-center font-semibold text-lg border-b border-teal-800 border-l w-1/3">
+                <div class="flex items-center justify-center gap-2">
+                  <svg width="24" height="24" viewBox="0 0 24 24" class="text-white" fill="currentColor">
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                    />
+                  </svg>
+                  <span>Jobcart</span>
+                </div>
+              </th>
+
+              <th class="px-6 py-8 text-center font-semibold text-lg border-b border-teal-800 border-l w-1/3">
+                <span>Traditional staffing agencies<sup class="text-sm">1</sup></span>
+              </th>
+            </tr>
+          </thead>
+
+          <!-- Table Body -->
+          <tbody>
+            <tr
+              *ngFor="let feature of features; let idx = index; trackBy: trackByIndex"
+              [class.border-b]="idx !== features.length - 1"
+              class="border-teal-800"
+            >
+              <!-- Feature Name and Description -->
+              <td class="px-6 py-8 text-left">
+                <h3 class="font-semibold text-white mb-2">{{ feature.title }}</h3>
+                <p *ngIf="feature.description" class="text-sm text-teal-100">
+                  {{ feature.description }}
+                </p>
+              </td>
+
+              <!-- Jobcart Column -->
+              <td class="px-6 py-8 text-center border-l border-teal-800">
+                <div *ngIf="feature.jobcartValue" class="font-semibold text-white mb-3">
+                  {{ feature.jobcartValue }}
+                </div>
+
+                <lucide-icon
+                  *ngIf="feature.jobcartMark === 'check'"
+                  [img]="icons.CheckCircle"
+                  class="text-cyan-400 mx-auto"
+                  [size]="28"
+                  [strokeWidth]="2.5"
+                ></lucide-icon>
+              </td>
+
+              <!-- Traditional Column -->
+              <td class="px-6 py-8 text-center border-l border-teal-800">
+                <div *ngIf="feature.traditionalValue" class="font-semibold text-white mb-3">
+                  {{ feature.traditionalValue }}
+                </div>
+
+                <lucide-icon
+                  *ngIf="feature.traditionalMark === 'x'"
+                  [img]="icons.XCircle"
+                  class="text-red-400 mx-auto"
+                  [size]="28"
+                  [strokeWidth]="2.5"
+                ></lucide-icon>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Comparison Cards - Mobile -->
+    <div class="md:hidden space-y-6">
+      <div
+        *ngFor="let feature of features; let idx = index; trackBy: trackByIndex"
+        class="bg-teal-900 rounded-2xl p-6 text-white"
+      >
+        <h3 class="font-semibold text-lg mb-2">{{ feature.title }}</h3>
+
+        <p *ngIf="feature.description" class="text-sm text-teal-100 mb-6">
+          {{ feature.description }}
+        </p>
+
+        <div class="grid grid-cols-2 gap-4">
+          <!-- Jobcart -->
+          <div class="text-center">
+            <p class="text-xs text-teal-200 mb-3 font-medium">Jobcart</p>
+
+            <div *ngIf="feature.jobcartValue" class="font-semibold text-white mb-2">
+              {{ feature.jobcartValue }}
+            </div>
+
+            <lucide-icon
+              *ngIf="feature.jobcartMark === 'check'"
+              [img]="icons.CheckCircle"
+              class="text-cyan-400 mx-auto"
+              [size]="24"
+              [strokeWidth]="2.5"
+            ></lucide-icon>
+          </div>
+
+          <!-- Traditional -->
+          <div class="text-center">
+            <p class="text-xs text-teal-200 mb-3 font-medium">Traditional</p>
+
+            <div *ngIf="feature.traditionalValue" class="font-semibold text-white mb-2">
+              {{ feature.traditionalValue }}
+            </div>
+
+            <lucide-icon
+              *ngIf="feature.traditionalMark === 'x'"
+              [img]="icons.XCircle"
+              class="text-red-400 mx-auto"
+              [size]="24"
+              [strokeWidth]="2.5"
+            ></lucide-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer note -->
+    <div class="mt-8 text-center text-sm text-slate-600">
+      <p><sup>1</sup> Based on industry data</p>
+    </div>
+  </div>
+</section>
