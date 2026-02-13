@@ -1,0 +1,12 @@
+th, td {
+   background: linear-gradient(90deg, #083A40 0%, #06707D 100%);
+
+
+}
+@media screen and (max-width: 767px) {
+.mobile-view {
+   margin-left: -32px;
+   margin-right: -32px;
+   border-radius: 0;
+}
+}

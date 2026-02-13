@@ -1,3 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "tailwindcss";
+
+body {
+  font-family: 'Hanken Grotesk', Georgia, serif;
+  background-color: #FCFBF9;
+}
+
+
+button, a {
+    cursor: pointer;
+}
+
+button:hover {
+      color: #06707D;
+    background-color: #fff;
+    border-color: #06707D;
+    border: 1px solid;
+}
