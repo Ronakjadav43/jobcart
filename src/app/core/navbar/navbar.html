@@ -1,5 +1,5 @@
 <!-- Desktop Header -->
-<header class="hidden md:block sticky top-0 z-50 w-full bg-white border-b border-gray-200">
+<header class="hidden md:block sticky top-0 z-50 w-full bg-[#FCFBF9] ">
   <div class=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="h-[89px] flex items-center justify-between h-16">
 <div class="flex items-center gap-[15px]">
@@ -20,7 +20,7 @@
 
       <!-- Actions -->
       <div class="flex items-center gap-5">
-        <button class="w-[90px] h-[41px] font-medium text-[16px] leading-[25.6px] text-[#2D3648] cursor-po">
+        <button class="w-[90px] h-[41px] font-medium text-[16px] leading-[25.6px] text-[#2D3648] rounded-[8px]">
           Log In
         </button>
         <button class="w-[90px] h-[41px] opacity-100 pt-[8.5px] pr-[18px] pb-[8.5px] pl-[18px] rounded-[8px] bg-[rgba(6,112,125,1)] font-hanken-grotesk  text-[16px] leading-[24px] text-center text-white">
@@ -43,30 +43,31 @@
       <img src="images/logo.png" alt="Jobcart" class="w-[185px] h-[32px]" />
     </a>
 
-    <button (click)="openMenu()" class="p-2 rounded-lg text-gray-700 hover:bg-gray-100">
-      <lucide-icon [img]="icons.Menu" class="w-6 h-6"></lucide-icon>
+    <button (click)="openMenu()" class="p-2 rounded-lg text-[#06707D] hover:bg-gray-100">
+      <lucide-icon [img]="icons.Menu" class="w-10 h-10"></lucide-icon>
     </button>
   </div>
 </header>
 
 <!-- Mobile Drawer -->
-<div *ngIf="mobileMenuOpen"
-     class="fixed top-0 left-0 right-0 h-screen w-full bg-slate-800 z-50 md:hidden overflow-y-auto transition-all duration-300">
+<div 
+[ngClass]="mobileMenuOpen ? 'h-[500px]' : 'h-0'"
+     class=" fixed top-0 left-0 right-0  w-full bg-gradient-to-r from-[#083A40] to-[#06707D] z-50 md:hidden overflow-y-auto transition-all duration-1000 ease-in-out">
 
   <!-- Drawer Header -->
-  <div class="flex items-center justify-between p-4 border-b border-slate-700">
+  <div class="flex items-center justify-between p-4 border-b border-slate-700 bg-[#FCFBF9]">
     <span class="text-white font-semibold flex items-center gap-2">
       <img src="images/logo.png" class="w-[185px] h-[32px]" />
       <!-- Jobcart -->
     </span>
 
-    <button (click)="closeMenu()" class="p-1 text-gray-300 hover:bg-slate-700 rounded-lg">
-      <lucide-icon [img]="icons.X" class="w-6 h-6"></lucide-icon>
+    <button (click)="closeMenu()" class="p-1 text-[#06707D] hover:bg-slate-700 rounded-lg">
+      <lucide-icon [img]="icons.X" class="w-10 h-10"></lucide-icon>
     </button>
   </div>
 
   <!-- Main Menu -->
-  <nav *ngIf="!showBusinessSubmenu" class="p-4 space-y-2">
+  <nav *ngIf="!showBusinessSubmenu" class="p-4 space-y-2 bg-gradient-to-r from-[#083A40] to-[#06707D]">
 
     <div *ngFor="let item of navItems">
       <button *ngIf="item.label === 'Business'"
@@ -117,13 +118,13 @@
 
   <!-- Bottom Actions -->
   <div *ngIf="!showBusinessSubmenu"
-       class="p-4 space-y-3 border-t border-slate-700 mt-4">
+       class="p-4 space-y-3 pb-8 border-t border-slate-700 mt-4">
 
-    <button class="w-full text-white border border-slate-600 py-2 rounded-md">
+    <button class="w-full h-[50px] opacity-100 pt-[8.5px] pr-[18px] pb-[8.5px] pl-[18px] rounded-[8px] border border-[rgba(6,112,125,1)] font-hanken-grotesk  text-[16px] leading-[24px] text-center text-white">
       Log In
     </button>
 
-    <button class="w-full bg-teal-600 hover:bg-teal-700 text-white py-2 rounded-md">
+    <button class="w-full h-[50px] opacity-100 pt-[8.5px] pr-[18px] pb-[8.5px] pl-[18px] rounded-[8px] bg-[rgba(6,112,125,1)] font-hanken-grotesk  text-[16px] leading-[24px] text-center text-white">
       Sign up
     </button>
   </div>

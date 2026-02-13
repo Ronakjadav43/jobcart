@@ -3,9 +3,9 @@
         <!-- Header -->
         <div class="mb-12 sm:mb-16">
           <!-- <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight mb-4"> -->
-             <h2 class="font-['Hanken_Grotesk'] font-semibold text-[45px] leading-[54px] tracking-[-0.9px] text-[#0F172A]">
+             <h2 class="font-['Hanken_Grotesk'] font-semibold text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl tracking-[-0.9px] text-[#0F172A]">
             From warehousing and fulfillment to dining facilities and retail,
-            <span class="font-serif font-normal italic text-[45px] leading-[54px] tracking-[-0.9px] text-[#06707D]">we've got you covered</span>
+            <span class="font-serif font-normal italic text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl tracking-[-0.9px] text-[#06707D]">we've got you covered</span>
           </h2>
         </div>
 
@@ -13,7 +13,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-3">
           <div
             *ngFor="let industry of industries"
-            class="relative h-64 sm:h-72 lg:h-80 rounded-2xl overflow-hidden group cursor-pointer"
+            class="group  relative h-64 sm:h-72 lg:h-80 rounded-2xl overflow-hidden group cursor-pointer"
 
             
           >
@@ -30,10 +30,26 @@
 
             <!-- Text Content -->
             <div class="absolute inset-0 flex items-end p-6 sm:p-8">
-              <h3 class="text-xl sm:text-2xl font-semibold text-white">
+              <div class="flex flex-col">
+              <h3 class="text-xl sm:text-2xl font-semibold text-white   duration-700 ease-in-out">
                 {{ industry.title }}
               </h3>
+
+              <h3 class="hidden group-hover:block  transition-all  duration-700 ease-in-out mt-3 text-xl sm:text-2xl font-semibold text-white">
+                {{ industry.subtitle }}  <span class="text-xl ml-3">⟶</span>
+              </h3>
+              </div>
+              
             </div>
+
+<!-- <div class="absolute inset-0 flex items-end p-6 sm:p-8">
+              
+              <h3 class="text-xl sm:text-2xl font-semibold text-white">
+                {{ industry.subtitle }}
+              </h3>
+            </div> -->
+
+
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@
 
     <!-- Title -->
     <!-- <h2 class="mb-8 sm:mb-10 md:mb-12 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight"> -->
-    <h2 class="mb-12 font-['Hanken_Grotesk'] font-bold text-[66px] leading-[79.2px] text-[#0F172A]">
+    <h2 class="mb-12 font-['Hanken_Grotesk'] font-bold text-3xl  md:text-3xl lg:text-4xl  xl:text-5xl  2xl:text-6xl  text-[#0F172A]">
       Frequently asked questions
     </h2>
 
@@ -15,7 +15,7 @@
 
         <mat-expansion-panel-header class="!h-[75px] !px-2 !py-0 !hover:bg-[#000] transition-colors !items-start">
 
-          <mat-panel-title class="font-['Hanken_Grotesk'] font-medium text-[28px] leading-[44.8px] text-[#0F172A]">
+          <mat-panel-title class="font-['Hanken_Grotesk'] font-medium text-xl md:text-2xl lg:text-3xl text-[#0F172A]">
             {{ item.question }}
           </mat-panel-title>
 
@@ -23,9 +23,31 @@
 
         <!-- Answer -->
         <div class="pb-4 sm:pb-5 md:pb-6 pt-2 sm:pt-3 md:pt-4 bg-gray-50 px-3 sm:px-0">
-          <p class="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 leading-relaxed">
+          <!-- <p class="text-xl md:text-2xl lg:text-3xl text-gray-600 leading-relaxed">
             {{ item.answer }}
-          </p>
+          </p> -->
+           <ul class="space-y-6 text-gray-700 text-base md:text-lg leading-relaxed">
+      
+      <li class="flex items-start gap-3">
+        <span class="mt-2 h-2 w-2 rounded-full bg-black"></span>
+        <p>
+          <span class="font-semibold text-black">For businesses:</span>
+          You only pay an all-inclusive hourly rate when a shift is booked.
+          This covers the worker’s pay, insurance, and background checks,
+          with no hidden fees or subscriptions.
+        </p>
+      </li>
+
+      <li class="flex items-start gap-3">
+        <span class="mt-2 h-2 w-2 rounded-full bg-black"></span>
+        <p>
+          <span class="font-semibold text-black">For workers:</span>
+          Instawork is free to use. You earn the hourly rate shown for each shift,
+          and payment details are always visible before you book.
+        </p>
+      </li>
+
+    </ul>
         </div>
 
       </mat-expansion-panel>
