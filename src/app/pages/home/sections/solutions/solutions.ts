@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 interface Solution {
   title: string;
   description: string;
-  icon: 'short' | 'long' | 'permanent';
+  image: string;
 }
 
 @Component({
@@ -16,17 +16,17 @@ interface Solution {
 export class Solutions {
 solutions: Solution[] = [
     {
-      icon: 'short',
+      image: 'assets/images/Short-term temporary workers.png',
       title: 'Short-term temporary workers',
       description: 'For one-off events and seasonal demand spikes. AI optimization for immediate productivity.',
     },
     {
-      icon: 'long',
+       image: 'assets/images/Long-term temporary workers.png',
       title: 'Long-term temporary workers',
       description: 'For longer-term and project-based work. AI matching for consistent reliability.',
     },
     {
-      icon: 'permanent',
+      image: 'assets/images/Hire permanent workers to join your team.png',
       title: 'Permanent workers to join your team',
       description: 'For hiring your next permanent team member. AI interviews for the perfect fit.',
     },

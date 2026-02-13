@@ -34,32 +34,32 @@ export class Industries {
     {
       id: 'warehousing',
       title: 'Warehousing',
-      image: 'https://images.unsplash.com/photo-1587282177267-0a8d3ce61b0d?w=600&h=400&fit=crop',
+      image: 'assets/images/Link1.png',
     },
     {
       id: 'ecommerce',
       title: 'Ecommerce Fulfillment',
-      image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop',
+      image: '/assets/images/Link2.png',
     },
     {
       id: '3pl',
       title: 'Third-Party Logistics (3PL)',
-      image: 'https://images.unsplash.com/photo-1600925260368-ae2f83cf8b7f?w=600&h=400&fit=crop',
+      image: '/assets/images/Link3.png',
     },
     {
       id: 'dining',
       title: 'Dining Facilities',
-      image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&h=400&fit=crop',
+     image: '/assets/images/Link4.png',
     },
     {
       id: 'stadiums',
       title: 'Stadiums & Events',
-      image: 'https://images.unsplash.com/photo-1540575467063-178f50002c4b?w=600&h=400&fit=crop',
+      image: '/assets/images/Link5.png',
     },
     {
       id: 'retail',
       title: 'Retail Operations',
-      image: 'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=600&h=400&fit=crop',
+      image: '/assets/images/Link6.png',
     },
   ];
 }
