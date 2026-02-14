@@ -5,8 +5,11 @@ th, td {
 }
 @media screen and (max-width: 767px) {
 .mobile-view {
-   margin-left: -32px;
-   margin-right: -32px;
+   margin-left: -16px;
+   margin-right: -16px;
    border-radius: 0;
 }
 }
+
+
+

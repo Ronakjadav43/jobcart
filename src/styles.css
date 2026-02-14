@@ -18,3 +18,25 @@ button:hover {
     border-color: #06707D;
     border: 1px solid;
 }
+
+
+.h2-45 {
+       font-size: 45px;
+        line-height: 50px;
+    }
+
+
+
+@media screen and (max-width: 767px) {
+    .h2-45 {
+       font-size: 40px;
+        line-height: 45px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .h2-45 {
+                font-size: 35px;
+        line-height: 40px;
+    }
+}

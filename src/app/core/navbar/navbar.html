@@ -32,18 +32,14 @@
   </div>
 </header>
 
-
-
-
-
 <!-- Mobile Header -->
-<header style="    transform-style: preserve-3d;" class="md:hidden sticky top-0 z-50 w-full bg-white border-b border-gray-200">
+<header style="transform-style: preserve-3d;" class="md:hidden sticky top-0 z-50 w-full bg-[#FCFBF9] border-b border-gray-200">
   <div class="px-4 py-3 flex items-center justify-between">
     <a routerLink="/" class="flex items-center gap-2">
       <img src="images/logo.png" alt="Jobcart" class="w-[185px] h-[32px]" />
     </a>
 
-    <button (click)="openMenu()" class="p-2 rounded-lg text-[#06707D] hover:bg-gray-100">
+    <button (click)="openMenu()" class="py-2 rounded-lg text-[#06707D] hover:bg-gray-100">
       <lucide-icon [img]="icons.Menu" class="w-10 h-10"></lucide-icon>
     </button>
   </div>
@@ -51,7 +47,7 @@
 
 <!-- Mobile Drawer -->
 <div 
-[ngClass]="mobileMenuOpen ? 'h-[500px]' : 'h-0'"
+[ngClass]="mobileMenuOpen ? 'h-[600px]' : 'h-0'"
      class=" fixed top-0 left-0 right-0  w-full bg-gradient-to-r from-[#083A40] to-[#06707D] z-50 md:hidden overflow-y-auto transition-all duration-1000 ease-in-out">
 
   <!-- Drawer Header -->
@@ -72,7 +68,7 @@
     <div *ngFor="let item of navItems">
       <button *ngIf="item.label === 'Business'"
               (click)="showBusinessSubmenu = true"
-              class="w-full text-left px-4 py-3 text-white hover:bg-slate-700 rounded-lg flex justify-between items-center">
+              class="w-full flex justify-between items-center pt-[22px] pb-[22px] text-white border-b border-[#E6E9F5]/20 text-[24px] font-semibold leading-[150%]">
         {{ item.label }}
         <lucide-icon [img]="icons.ChevronRight" class="w-5 h-5"></lucide-icon>
       </button>
@@ -80,7 +76,7 @@
       <a *ngIf="item.label !== 'Business'"
          [routerLink]="item.href"
          (click)="closeMenu()"
-         class="block px-4 py-3 text-white hover:bg-slate-700 rounded-lg">
+         class="flex justify-between items-center pt-[22px] pb-[22px] text-white border-b border-[#E6E9F5]/20 text-[24px] font-semibold leading-[150%]">
         {{ item.label }}
       </a>
     </div>
@@ -118,13 +114,13 @@
 
   <!-- Bottom Actions -->
   <div *ngIf="!showBusinessSubmenu"
-       class="p-4 space-y-3 pb-8 border-t border-slate-700 mt-4">
+       class="p-4 space-y-4 pb-8 border-t border-slate-700 mt-4">
 
-    <button class="w-full h-[50px] opacity-100 pt-[8.5px] pr-[18px] pb-[8.5px] pl-[18px] rounded-[8px] border border-[rgba(6,112,125,1)] font-hanken-grotesk  text-[16px] leading-[24px] text-center text-white">
+    <button class="w-full h-[50px] opacity-100 pt-[8.5px] pr-[18px] pb-[8.5px] pl-[18px] rounded-[8px] border border-[#FCFBF9] font-hanken-grotesk  text-[18px] leading-[24px] text-center text-[#FCFBF9] font-medium">
       Log In
     </button>
 
-    <button class="w-full h-[50px] opacity-100 pt-[8.5px] pr-[18px] pb-[8.5px] pl-[18px] rounded-[8px] bg-[rgba(6,112,125,1)] font-hanken-grotesk  text-[16px] leading-[24px] text-center text-white">
+    <button class="w-full h-[50px] opacity-100 pt-[8.5px] pr-[18px] pb-[8.5px] pl-[18px] rounded-[8px] border border-[#FCFBF9] font-hanken-grotesk  text-[18px] leading-[24px] text-center text-[#FCFBF9] font-medium">
       Sign up
     </button>
   </div>

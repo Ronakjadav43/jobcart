@@ -1,10 +1,10 @@
-<section class="from-slate-50 to-white py-12 px-4 sm:px-6 lg:px-8">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="from-slate-50 to-white py-6 sm:py-8 lg:py-12 px-2 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
     <!-- Header -->
     <div class="mb-12 flex flex-col gap-[20px]">
-      <h2 class="font-['Hanken_Grotesk'] font-semibold text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl tracking-[-0.9px] text-[#0F172A]">
+      <h2 class="font-['Hanken_Grotesk'] font-semibold h2-45 tracking-[-0.9px] text-[#0F172A]">
         The <span
-          class="font-serif font-normal italic text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl tracking-[-0.9px] text-[#06707D]">smarter
+          class="font-serif font-normal italic h2-45 tracking-[-0.9px] text-[#06707D]">smarter
           choice</span> for staffing
       </h2>
       <p class="font-['Hanken_Grotesk'] font-medium text-lg lg:text-xl text-[#0F172A]">
@@ -19,16 +19,19 @@
           <!-- Table Header -->
           <thead>
             <tr>
-              <th class="px-6 py-6 text-left font-semibold text-lg border-b border-[#E6E9F533] w-56/100">
+              <th class="pl-4 pr-1 p-4 sm:p-3 md:p-4 lg:p-6 text-left font-semibold text-lg border-b border-[#E6E9F533] w-50/100 md:w-56/100">
                 <span class="text-sm text-teal-200"></span>
               </th>
-              <th class="px-6 py-6 text-center font-semibold text-lg border-b border-[#E6E9F533] border-b w-22/100">
-                <div class="flex items-center justify-center gap-2">
+              <th class="p-2 sm:p-3 md:p-4 lg:p-6 text-center font-semibold text-lg border-b border-[#E6E9F533] border-b w-25/100 md:w-22/100">
+                <div class="hidden md:flex items-center justify-center gap-2">
                   <img src="\assets\images\logo-2.png" alt="" />
                 </div>
+                <div class="flex md:hidden items-center justify-center gap-2">
+                  <img src="\assets\images\logos.png" alt="" class="w-10 sm:w-12 h-auto" />
+                </div>
               </th>
-              <th class="px-6 py-6 text-center font-semibold text-lg border-b border-[#E6E9F533] border-b w-22/100">
-                <span class="font-['Hanken_Grotesk'] font-semibold text-[18px] leading-[22px] text-center text-white">
+              <th class="p-2 sm:p-3 md:p-4 lg:p-6 text-center font-semibold text-lg border-b border-[#E6E9F533] border-b w-25/100 md:w-22/100 ">
+                <span class="font-['Hanken_Grotesk'] font-semibold text-[14px] sm:text-[16px] md:text-[18px] leading-[22px] text-center text-white">
                   Traditional staffing agencies<sup class="text-sm">1</sup></span>
               </th>
             </tr>
@@ -36,36 +39,36 @@
           <!-- Table Body -->
           <tbody>
             <tr *ngFor="let feature of features; let idx = index; trackBy: trackByIndex"
-              [class.border-b]="idx !== features.length - 1" class="border-teal-800">
+              [class.border-b]="idx !== features.length - 1" class="border-[#E6E9F5]/20">
               <!-- Feature Name and Description -->
-              <td class="px-6 py-6 text-left">
-                <h3 class="font-['Hanken_Grotesk'] font-semibold text-[18px] leading-[22px] text-white">{{ feature.title
+              <td class="pl-4 pr-1 p-4 sm:p-3 md:p-4 lg:p-6 text-left">
+                <h3 class="break-normal font-['Hanken_Grotesk'] font-semibold text-[14px] sm:text-[16px] md:text-[18px] leading-[22px] text-white">{{ feature.title
                   }}</h3>
 
                 <p *ngIf="feature.description"
-                  class="font-['Hanken_Grotesk'] font-normal text-[15px] leading-[16.8px] text-white">
+                  class="font-['Hanken_Grotesk'] font-normal text-[12px] sm:text-[14px] md:text-[16px] leading-[16.8px] text-white">
                   {{ feature.description }}
                 </p>
               </td>
-              <td class="px-6 py-6 text-center border-b border-teal-800">
+              <td class="p-2 sm:p-3 md:p-4 lg:p-6 text-center border-b border-[#E6E9F5]/20">
                 <ng-container *ngIf="feature.jobcartValue; else showImage">
-                  <div class="font-['Hanken_Grotesk'] font-semibold text-[20px] leading-[22px] text-center text-white">
+                  <div class="font-['Hanken_Grotesk'] font-semibold text-[14px] sm:text-[18px] md:text-[20px] leading-[22px] text-center text-white">
                     {{ feature.jobcartValue }}
                   </div>
                 </ng-container>
 
                 <ng-template #showImage>
-                  <img src="assets/images/T.png" alt="icon" class="m-auto" />
+                  <img src="assets/images/T.png" alt="icon" class="m-auto w-6 sm:w-8 md:w-10" />
                 </ng-template>
               </td>
-              <td class="px-6 py-6 text-center border-b border-teal-800">
+              <td class="p-2 sm:p-3 md:p-4 lg:p-6 text-center border-b border-[#E6E9F5]/20">
                 <ng-container *ngIf="feature.traditionalValue; else showImages">
-                  <div class="font-['Hanken_Grotesk'] font-semibold text-[20px] leading-[22px] text-center text-white">
+                  <div class="font-['Hanken_Grotesk'] font-semibold text-[14px] sm:text-[18px] md:text-[20px] leading-[22px] text-center text-white">
                     {{ feature.traditionalValue }}
                   </div>
                 </ng-container>
                 <ng-template #showImages>
-                  <img src="assets/images/F.png" alt="icon" class="m-auto" />
+                  <img src="assets/images/F.png" alt="icon" class="m-auto w-6 sm:w-8 md:w-10" />
                 </ng-template>
               </td>
             </tr>
